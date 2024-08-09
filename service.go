@@ -1,4 +1,6 @@
-package #MODULE_NAME
+package main
+
+var ServiceString = `package #MODULE_NAME
 
 import (
   "github.com/gofiber/fiber/v2"
@@ -38,3 +40,4 @@ func (u *#CAPITALIZED_NAMEServiceStruct) Delete#CAPITALIZED_NAME(data *Delete#CA
     "message": "#CAPITALIZED_NAME deleted successfully",
   }, nil
 }
+`

@@ -1,4 +1,6 @@
-package #MODULE_NAME
+package main
+
+var ControllerString = `package #MODULE_NAME
 
 import (
 	"github.com/hive-go/hive"
@@ -82,3 +84,4 @@ func init() {
 		return body, nil
 	})
 }
+`
