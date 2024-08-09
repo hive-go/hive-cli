@@ -32,7 +32,7 @@ Getting started with Hive Cli is easy. Here's a basic example to create User Mod
 
 Result in folder structure
 ```bash
-src
+
  ├── src
  │   └── modules
  │       └── user
