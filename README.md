@@ -19,7 +19,7 @@
 
 
 ```bash
-go install github.com/hive-go/hive-cli/
+go install github.com/hive-go/hivecli@latest
 ```
 
 ## ⚡️ Quickstart
