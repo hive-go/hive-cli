@@ -1,8 +1,8 @@
 <h1 align="center">
   <a href="#">
     <picture>
-      <source height="125" media="(prefers-color-scheme: dark)" srcset="./assets/logo.jpg" style="border-radius:15px">
-      <img height="125" alt="Hive" src="./assets/logo.jpg" style="border-radius:15px">
+      <source height="125" media="(prefers-color-scheme: dark)" srcset="https://github.com/hive-go/hive/raw/main/assets/logo.jpg" style="border-radius:15px">
+      <img height="125" alt="Hive" src="https://github.com/hive-go/hive/raw/main/assets/logo.jpg" style="border-radius:15px">
     </picture>
   </a>
   <br>
