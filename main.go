@@ -105,7 +105,7 @@ var #CAPITALIZED_NAMEService = #CAPITALIZED_NAMEServiceStruct{}
 
 func (u *#CAPITALIZED_NAMEServiceStruct) Create#CAPITALIZED_NAME(data *Create#CAPITALIZED_NAMEDto) (any, error) {
 	return fiber.Map{
-		"message": "#CAPITALIZED_NAME created successfully",
+		"message": "#CAPITALIZED_NAME created successfully !!!",
 	}, nil
 }
 
