@@ -18,7 +18,7 @@ var #CAPITALIZED_NAMEController = hive.CreateController()
 
 func init() {
 
-	DomainController.SetConfig(hive.ControllerConfig{
+	#CAPITALIZED_NAMEController.SetConfig(hive.ControllerConfig{
 		Prefix: "/#MODULE_NAME",
 	})
 
@@ -39,7 +39,7 @@ func init() {
 		return result, nil
 	})
 
-	#CAPITALIZED_NAMEController.Get("", func(c *hive.Ctx) (any, error) {
+	#CAPITALIZED_NAMEController.Get("", func(c *fiber.Ctx) (any, error) {
 		result, err := #CAPITALIZED_NAMEService.Get#CAPITALIZED_NAMEs()
 
 		if err != nil {
@@ -122,9 +122,9 @@ func (u *#CAPITALIZED_NAMEServiceStruct) Get#CAPITALIZED_NAMEById(data *Get#CAPI
   }, nil
 }
 
-func (u *#CAPITALIZED_NAMEServiceStruct) Update#CAPITALIZED_NAME(data *Update#CAPITALIZED_NAMEDto) (any, error) {
+func (u *#CAPITALIZED_NAMEServiceStruct) Update#CAPITALIZED_NAME(id string, data *Update#CAPITALIZED_NAMEDto) (any, error) {
   return fiber.Map{
-    "message": "#CAPITALIZED_NAME updated successfully",
+    "message": "#CAPITALIZED_NAME updated successfully for id " + id,
   }, nil
 }
 
