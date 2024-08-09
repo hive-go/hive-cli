@@ -19,7 +19,7 @@
 
 
 ```bash
-go install github.com/hive-go/hivecli@latest
+go install github.com/hive-go/hive-cli@latest
 ```
 
 ## ⚡️ Quickstart
@@ -27,7 +27,7 @@ go install github.com/hive-go/hivecli@latest
 Getting started with Hive Cli is easy. Here's a basic example to create User Module
 
 ```bash
-  hivecli generate_resource user
+  hive-cli generate_resource user
 ```
 
 Result in folder structure
