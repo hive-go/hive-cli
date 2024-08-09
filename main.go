@@ -110,15 +110,15 @@ func (u *#CAPITALIZED_NAMEServiceStruct) Create#CAPITALIZED_NAME(data *Create#CA
 }
 
 
-func (u *#CAPITALIZED_NAMEServiceStruct) Get#CAPITALIZED_NAMEs(data *Get#CAPITALIZED_NAMEDto) (any, error) {
+func (u *#CAPITALIZED_NAMEServiceStruct) Get#CAPITALIZED_NAMEs() (any, error) {
   return fiber.Map{
     "message": "#CAPITALIZED_NAME retrieved successfully",
   }, nil
 }
 
-func (u *#CAPITALIZED_NAMEServiceStruct) Get#CAPITALIZED_NAMEById(data *Get#CAPITALIZED_NAMEByIdDto) (any, error) {
+func (u *#CAPITALIZED_NAMEServiceStruct) Get#CAPITALIZED_NAMEById(id string) (any, error) {
   return fiber.Map{
-    "message": "#CAPITALIZED_NAME retrieved successfully",
+    "message": "#CAPITALIZED_NAME retrieved successfully for id " + id,
   }, nil
 }
 
