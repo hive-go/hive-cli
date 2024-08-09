@@ -128,9 +128,9 @@ func (u *#CAPITALIZED_NAMEServiceStruct) Update#CAPITALIZED_NAME(id string, data
   }, nil
 }
 
-func (u *#CAPITALIZED_NAMEServiceStruct) Delete#CAPITALIZED_NAME(data *Delete#CAPITALIZED_NAMEDto) (any, error) {
+func (u *#CAPITALIZED_NAMEServiceStruct) Delete#CAPITALIZED_NAME(id string) (any, error) {
   return fiber.Map{
-    "message": "#CAPITALIZED_NAME deleted successfully",
+    "message": "#CAPITALIZED_NAME deleted successfully for id " + id,
   }, nil
 }
 `
