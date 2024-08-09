@@ -17,12 +17,13 @@ func main() {
 		Run: func(cmd *cobra.Command, args []string) {
 			moduleName := args[0]
 			capitalizedModuleName := capitalize(moduleName)
-			os.Mkdir("modules", 0755)
-			os.Mkdir("modules/"+moduleName, 0755)
+			os.Mkdir("src", 0755)
+			os.Mkdir("src/modules", 0755)
+			os.Mkdir("src/modules/"+moduleName, 0755)
 
 			//prepare service
 			//read service.txt in root and replace all occurrences of #MODULE_NAME with moduleName and all occurrences of #CAPITALIZED_NAME with capitalizedModuleName
-			//after it write the content to modules/moduleName/module_name.service.go
+			//after it write the content to src/modules/moduleName/module_name.service.go
 			//start
 			serviceFile, err := os.ReadFile("service.txt")
 			if err != nil {
@@ -30,7 +31,7 @@ func main() {
 			}
 			serviceContent := strings.ReplaceAll(string(serviceFile), "#MODULE_NAME", moduleName)
 			serviceContent = strings.ReplaceAll(serviceContent, "#CAPITALIZED_NAME", capitalizedModuleName)
-			os.WriteFile("modules/"+moduleName+"/"+moduleName+".service.go", []byte(serviceContent), 0644)
+			os.WriteFile("src/modules/"+moduleName+"/"+moduleName+".service.go", []byte(serviceContent), 0644)
 
 			//prepare DTO
 			dtoFile, err := os.ReadFile("dto.txt")
@@ -39,7 +40,7 @@ func main() {
 			}
 			dtoContent := strings.ReplaceAll(string(dtoFile), "#MODULE_NAME", moduleName)
 			dtoContent = strings.ReplaceAll(dtoContent, "#CAPITALIZED_NAME", capitalizedModuleName)
-			os.WriteFile("modules/"+moduleName+"/"+moduleName+".dto.go", []byte(dtoContent), 0644)
+			os.WriteFile("src/modules/"+moduleName+"/"+moduleName+".dto.go", []byte(dtoContent), 0644)
 
 			//prepare controller
 			controllerFile, err := os.ReadFile("controller.txt")
@@ -48,7 +49,16 @@ func main() {
 			}
 			controllerContent := strings.ReplaceAll(string(controllerFile), "#MODULE_NAME", moduleName)
 			controllerContent = strings.ReplaceAll(controllerContent, "#CAPITALIZED_NAME", capitalizedModuleName)
-			os.WriteFile("modules/"+moduleName+"/"+moduleName+".controller.go", []byte(controllerContent), 0644)
+			os.WriteFile("src/modules/"+moduleName+"/"+moduleName+".controller.go", []byte(controllerContent), 0644)
+
+			//prepare module
+			moduleFile, err := os.ReadFile("module.txt")
+			if err != nil {
+				panic(err)
+			}
+			moduleContent := strings.ReplaceAll(string(moduleFile), "#MODULE_NAME", moduleName)
+			moduleContent = strings.ReplaceAll(moduleContent, "#CAPITALIZED_NAME", capitalizedModuleName)
+			os.WriteFile("src/modules/"+moduleName+"/"+moduleName+".module.go", []byte(moduleContent), 0644)
 
 		},
 	}

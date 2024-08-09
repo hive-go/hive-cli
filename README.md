@@ -33,11 +33,12 @@ Getting started with Hive Cli is easy. Here's a basic example to create User Mod
 Result in folder structure
 ```bash
 src
- ├── modules
- │   └── user
- │       ├── user.module.go
- │       ├── user.controller.go
- │       └── user.service.go
+ ├── src
+ │   └── modules
+ │       └── user
+ │           ├── user.module.go
+ │           ├── user.controller.go
+ │           └── user.service.go
  ├── main.go
  ├── go.mod
  └── go.sum
