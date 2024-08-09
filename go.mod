@@ -1,4 +1,4 @@
-module github.com/hive-go/hive-cli
+module github.com/hive-go/hivecli
 
 go 1.22.0
 
